@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Http\RedirectResponse;
@@ -17,13 +19,11 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $product = Product::with('category')
-                    ->latest()
-                    ->get(); 
+        $product = Product::with('category')->latest()->get(); 
         
-        $categories = Product::orderBy('name', 'asc')->get();
+        $categories = Category::orderBy('name', 'asc')->get();
 
-        return Inertia('Products/index', [
+        return Inertia::render('products/index', [
             'products' => $product,
             'categories' => $categories
         ]);
