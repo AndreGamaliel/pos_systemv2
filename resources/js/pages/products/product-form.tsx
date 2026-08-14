@@ -57,7 +57,7 @@ export default function ProductForm({ product, categories, onClose }: Props) {
             <DialogContent className="max-w-lg">
                 <DialogHeader>
                     <DialogTitle>
-                        {product ? 'Edit Prodcut' : 'Add Product'}
+                        {product ? 'Edit Product' : 'Add Product'}
                     </DialogTitle>
                 </DialogHeader>
                 <form onSubmit={submit} className="space-y-4">
@@ -165,7 +165,7 @@ export default function ProductForm({ product, categories, onClose }: Props) {
                             variant="outline"
                             onClick={onClose}
                         >
-                            Cencel
+                            Cancel
                         </Button>
                         <Button type="submit" disabled={processing}>
                             {processing
