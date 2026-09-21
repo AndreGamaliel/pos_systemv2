@@ -6,10 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-#[FIllable('name', 'description')]
+// #[FIllable('name', 'description')]
 
 class Category extends Model
 {
+    protected $fillable = [
+        'name',
+        'description',
+    ];
     //
     public function products() : HasMany
     {

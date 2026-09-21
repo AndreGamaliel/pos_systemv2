@@ -107,7 +107,7 @@ export default function ProductIndex({ products, categories }: Props) {
                                             </span>
                                         )}
                                     </td>
-                                    <td className="px-4 py-4 text-right">
+                                    <td className="px-4 py-4 text-center">
                                         <Badge
                                             variant={
                                                 product.is_active

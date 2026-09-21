@@ -48,7 +48,7 @@ export default function ProductForm({ product, categories, onClose }: Props) {
             },
         };
         product
-            ? put(`/products/$(product.id)`, opts)
+            ? put(`/products/${product.id}`, opts)
             : post(`/products`, opts);
     }
 
